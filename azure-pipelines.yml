@@ -20,4 +20,5 @@ steps:
     dotnet user-secrets set Azure:SignalR:ConnectionString $(key)
     dotnet build --configuration $(buildConfiguration)
 
-displayName: 'dotnet build $(buildConfiguration)'
+- script:
+  displayName: 'dotnet build $(buildConfiguration)'
