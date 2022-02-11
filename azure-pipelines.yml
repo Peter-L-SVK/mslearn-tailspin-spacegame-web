@@ -12,7 +12,8 @@ pool:
 variables:
 - name: key
   value: "Endpoint=https://tfjnhyllghvwu.service.signalr.net;AccessKey=qx7MliZtP5mEGHhwya1xl8RzjrgjmQr8savv4B9ljfc=;Version=1.0;"
-  buildConfiguration: 'Release'
+- name: buildConfiguration
+  value: 'Release'
 
 steps:
 - script: dotnet user-secrets set Azure:SignalR:ConnectionString $(key)
