@@ -11,9 +11,10 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+- name: key
+  value: "Endpoint=https://tfjnhyllghvwu.service.signalr.net;AccessKey=qx7MliZtP5mEGHhwya1xl8RzjrgjmQr8savv4B9ljfc=;Version=1.0;"
 
 steps:
-- script: foo="Endpoint=https://tfjnhyllghvwu.service.signalr.net;AccessKey=qx7MliZtP5mEGHhwya1xl8RzjrgjmQr8savv4B9ljfc=;Version=1.0;"
-- script: dotnet user-secrets set Azure:SignalR:ConnectionString $(foo)
+- script: dotnet user-secrets set Azure:SignalR:ConnectionString $(key)
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
