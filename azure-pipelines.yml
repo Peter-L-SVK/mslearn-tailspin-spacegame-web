@@ -10,9 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  buildConfiguration: 'Release'
 - name: key
   value: "Endpoint=https://tfjnhyllghvwu.service.signalr.net;AccessKey=qx7MliZtP5mEGHhwya1xl8RzjrgjmQr8savv4B9ljfc=;Version=1.0;"
+  buildConfiguration: 'Release'
 
 steps:
 - script: dotnet user-secrets set Azure:SignalR:ConnectionString $(key)
