@@ -17,7 +17,5 @@ variables:
 
 steps:
 - powershell: |
-  dotnet user-secrets set Azure:SignalR:ConnectionString $(key)
-  dotnet build --configuration $(buildConfiguration)
-  
-  displayName: 'dotnet build $(buildConfiguration)'
+    dotnet user-secrets set Azure:SignalR:ConnectionString $(key)
+    dotnet build --configuration $(buildConfiguration)
